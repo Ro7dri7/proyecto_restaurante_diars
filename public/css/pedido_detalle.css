@@ -1,0 +1,92 @@
+/* public/css/pedido_detalle.css */
+
+/* --- Estilos globales --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffebbe;
+    margin: 0;
+    padding: 20px;
+}
+
+/* --- Contenedor principal --- */
+.container-detalle {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* --- Título --- */
+.titulo-detalle {
+    color: #e00018;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* --- Sección de información general --- */
+.info-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.info-value {
+    color: #333;
+}
+
+/* --- Tabla de productos --- */
+.table-detalle {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table-detalle th,
+.table-detalle td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-detalle th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+/* --- Totales --- */
+.totales-detalle {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #ddd;
+    text-align: right;
+}
+
+/* --- Botón de regreso --- */
+.btn-back-detalle {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.btn-back-detalle:hover {
+    background-color: #5a6268;
+}

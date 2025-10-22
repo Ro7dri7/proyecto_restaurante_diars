@@ -1,0 +1,108 @@
+/* public/css/pedido_exito.css */
+
+/* --- Estilos globales --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFEBBE;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Header --- */
+.panel-header-exito {
+    background-color: #DC143C;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel-header-exito h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.panel-header-exito a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- Contenido Principal --- */
+.main-exito {
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-exito {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 500px;
+    text-align: center;
+}
+
+/* --- Logo --- */
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- Título y mensaje --- */
+.titulo-exito {
+    color: #DC143C;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.separador {
+    border: 0;
+    border-top: 2px solid #FFA500;
+    width: 80%;
+    margin: 0 auto 20px;
+}
+
+.mensaje-exito {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Botones --- */
+.btn-exito {
+    display: inline-block;
+    background-color: #DC143C;
+    color: white;
+    padding: 12px 24px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-exito:hover {
+    background-color: #B20029;
+}
+
+/* --- Footer --- */
+.footer-exito {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
