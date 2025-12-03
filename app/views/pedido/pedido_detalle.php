@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Detalles del Pedido #<?= $pedidoData['idPedido'] ?> - D'alicias</title>
     <!-- ✅ Ruta absoluta CORREGIDA -->
-    <link rel="stylesheet" href="/mvc_restaurante/public/css/pedido_detalle.css">
+    <link rel="stylesheet" href="/mvc_restaurante/public/css/pedido/pedido_detalle.css">
 </head>
 <body>
     <div class="container-detalle">

@@ -1,0 +1,100 @@
+/* public/css/cobranza/pago_exito.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+/* --- CORRECCIÓN: RESET UNIVERSAL --- */
+* {
+    box-sizing: border-box; /* Esto hace que el padding no aumente el ancho total */
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #fcefd0; /* Crema */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 25px;
+    display: inline-block;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.title {
+    color: #111111;
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    font-weight: 800;
+}
+
+.subtitle {
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    padding: 0 10px;
+}
+
+.subtitle strong {
+    color: #D60000;
+    font-weight: 700;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #D60000;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(214, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #b30000;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #f3f4f6;
+    color: #333333;
+}
+
+.btn-secondary:hover {
+    background-color: #e5e7eb;
+    transform: translateY(-2px);
+}

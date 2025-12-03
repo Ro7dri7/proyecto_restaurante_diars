@@ -1,0 +1,58 @@
+/* public/css/pedido/estado_pedido.css */
+
+/* Estados de pedido */
+.estado-registrado {
+    background-color: #fef9c3;
+    color: #7f5a00;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-weight: bold;
+}
+
+.estado-cocina {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-weight: bold;
+}
+
+.estado-preparado {
+    background-color: #dcf0c7;
+    color: #3f6212;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-weight: bold;
+}
+
+.estado-entregado {
+    background-color: #d1fae5;
+    color: #059669;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-weight: bold;
+}
+
+/* Botón confirmar */
+.btn-confirmar {
+    background: #ffbc0d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn-confirmar:hover {
+    background: #eaa700;
+}
+
+/* Ícono de alimento */
+.icon-comida {
+    font-size: 16px;
+}

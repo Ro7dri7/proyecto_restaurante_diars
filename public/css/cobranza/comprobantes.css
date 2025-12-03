@@ -1,0 +1,651 @@
+/* public/css/cobranza/comprobantes.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #ffebbe;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* --- HEADER --- */
+.header-main {
+    background: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #ffbc0d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-regresar {
+    background: #e00018;
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+}
+
+.btn-regresar:hover {
+    background: #c50014;
+    transform: translateY(-1px);
+}
+
+.titulo-pagina {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #111;
+}
+
+.titulo-pagina ion-icon {
+    font-size: 1.5rem;
+    color: #e00018;
+}
+
+.titulo-pagina h1 {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.usuario-info {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.usuario-info small {
+    display: block;
+    color: #777;
+}
+
+/* --- CONTENEDOR --- */
+.contenedor-layout {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* --- MENSAJE ÉXITO --- */
+.mensaje-exito {
+    background: #dcfce7;
+    border: 1px solid #16a34a;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.icono-exito {
+    color: #16a34a;
+    font-size: 1.5rem;
+}
+
+/* --- STATS CARDS --- */
+.stats-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card-stat {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    border: 1px solid #fde68a;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: 700;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #e00018;
+    margin-top: 5px;
+}
+
+/* --- VISTA PREVIA PEDIDO (NUEVO) --- */
+.vista-previa-pedido {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.vista-previa-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.vista-previa-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #1f2937;
+}
+
+.vista-previa-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-cliente p,
+.info-total p {
+    margin: 0.35rem 0;
+    font-size: 1rem;
+}
+
+.acciones-vista-previa {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.btn-accion {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-accion.azul {
+    background: #4f46e5;
+    color: white;
+}
+
+.btn-accion.gris {
+    background: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #d1d5db;
+}
+
+.btn-accion.gris:hover {
+    background: #e5e7eb;
+}
+
+/* --- BADGES ESTADO --- */
+.badge-estado {
+    padding: 0.25rem 0.75rem;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.badge-estado.pagado { background: #dcfce7; color: #16a34a; }
+.badge-estado.facturado { background: #e0f2fe; color: #0284c7; }
+.badge-estado.entregado { background: #fef9c3; color: #854d0e; }
+
+/* --- PANEL BLANCO --- */
+.panel-blanco {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid #fceeb5;
+}
+
+/* --- TOOLBAR --- */
+.toolbar {
+    padding: 20px;
+    background: #fffdf5;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+}
+
+.search-box ion-icon {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: #999;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.search-box input:focus {
+    border-color: #ffbc0d;
+}
+
+.actions-box {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: #e00018;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-primary:hover {
+    background: #c50014;
+}
+
+.btn-outline {
+    background: white;
+    border: 2px solid #eee;
+    color: #555;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-outline:hover {
+    background: #f9f9f9;
+    border-color: #ddd;
+}
+
+/* --- TABLA --- */
+.tabla-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f9fafb;
+    border-bottom: 2px solid #eee;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #666;
+    font-weight: 700;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+tbody tr:hover {
+    background: #fffcf0;
+}
+
+.col-cliente strong {
+    display: block;
+    color: #111;
+}
+
+.col-cliente small {
+    color: #888;
+}
+
+.badge-pedido {
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.badge-metodo {
+    background: #ecfdf5;
+    color: #047857;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid #d1fae5;
+    font-size: 0.8rem;
+}
+
+.font-bold {
+    font-weight: 700;
+    color: #e00018;
+}
+
+.btn-group {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.btn-icon {
+    background: #f3f4f6;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: 0.2s;
+}
+
+.btn-icon:hover {
+    background: #e00018;
+    color: white;
+}
+
+/* --- FOOTER TABLA --- */
+.footer-tabla {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.paginacion {
+    display: flex;
+    gap: 5px;
+}
+
+.paginacion button {
+    border: 1px solid #eee;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.paginacion button.active {
+    background: #ffbc0d;
+    border-color: #ffbc0d;
+    color: #333;
+    font-weight: 700;
+}
+
+.paginacion button:hover:not(:disabled) {
+    background: #f9f9f9;
+}
+
+/* --- MODAL PDF --- */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content.a4-wrapper {
+    background: #525659;
+    width: 100%;
+    max-width: 900px;
+    height: 90vh;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.modal-header {
+    background: #323639;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-actions button {
+    background: transparent;
+    border: none;
+    color: #ccc;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.modal-actions button:hover {
+    color: white;
+}
+
+.a4-page {
+    background: white;
+    width: 210mm;
+    margin: 20px auto;
+    padding: 40px;
+    flex: 1;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px dashed #333;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.empresa-info h2 {
+    font-size: 1.5rem;
+    color: #e00018;
+    margin-bottom: 5px;
+}
+
+.recuadro-ruc {
+    border: 2px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.recuadro-ruc h3 {
+    font-size: 1rem;
+    background: #eee;
+    padding: 2px 5px;
+}
+
+.cliente-info {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.invoice-items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.invoice-items th {
+    border-bottom: 1px solid #333;
+    text-align: left;
+    padding: 5px;
+}
+
+.invoice-items td {
+    padding: 8px 5px;
+}
+
+.invoice-total {
+    width: 50%;
+    margin-left: auto;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+}
+
+.fila-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.grand-total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-top: 2px solid #333;
+    padding-top: 5px;
+}
+
+.invoice-footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- MODAL DETALLE --- */
+.modal-detalle {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-detalle-content {
+    background: white;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    background: #f9fafb;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-body {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.tabla-items-detalle {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tabla-items-detalle th,
+.tabla-items-detalle td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.tabla-items-detalle th {
+    background: #f3f4f6;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.resumen-totales {
+    background: #f9fafb;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.fila-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.grand-total {
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-top: 2px solid #333;
+    padding-top: 10px;
+    margin-top: 10px;
+}

@@ -1,0 +1,242 @@
+/* public/css/cobranza/registrar_pago.css */
+
+/* --- FUENTES Y RESET --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+
+/* --- FONDO PRINCIPAL (Color crema) --- */
+body { 
+    background-color: #ffebbe; 
+    color: #333; 
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    overflow: hidden; 
+}
+
+/* --- HEADER --- */
+.header-caja {
+    background: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    border-bottom: 4px solid #ffbc0d; /* Línea amarilla decorativa */
+}
+.titulo-seccion { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; color: #111; font-weight: 800; }
+/* Icono en Rojo */
+.titulo-seccion ion-icon { color: #e00018; font-size: 1.8rem; }
+.info-sistema { text-align: right; }
+.info-sistema span { font-weight: 600; color: #555; }
+.info-sistema small { display: block; color: #888; }
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 20px;
+    padding: 0 20px 20px 20px;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- COLUMNA IZQUIERDA (LISTA) --- */
+.columna-lista {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #fceeb5;
+}
+.lista-header {
+    padding: 15px;
+    border-bottom: 2px solid #fff7ed;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lista-header h2 { color: #444; font-weight: 700; }
+
+/* Badge contador (Rojo suave) */
+.badge-contador {
+    background: #fee2e2; color: #e00018; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;
+}
+.lista-scroll { overflow-y: auto; flex: 1; padding: 10px; }
+.estado-vacio-lista { padding: 20px; text-align: center; color: #666; font-style: italic; }
+
+/* --- TARJETAS DE PEDIDOS --- */
+.tarjeta-pedido {
+    background: white;
+    border: 1px solid #e5e7eb;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+/* Efecto hover con borde naranja/amarillo */
+.tarjeta-pedido:hover { 
+    border-color: #ffbc0d; 
+    background-color: #fffdf5;
+    box-shadow: 0 2px 5px rgba(255, 188, 13, 0.2); 
+}
+.tarjeta-pedido.seleccionado { 
+    background-color: #fffbeb; 
+    border-left: 4px solid #e00018; /* Borde rojo al seleccionar */
+    border-color: #ffbc0d;
+}
+
+.fila-top { display: flex; justify-content: space-between; margin-bottom: 5px; color: #111; }
+.fila-bottom { display: flex; justify-content: space-between; font-size: 0.9rem; color: #666; }
+.hora { background: #f3f4f6; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
+
+/* Precio en ROJO */
+.precio { color: #e00018; font-weight: 800; font-size: 1.1rem; }
+
+/* --- COLUMNA DERECHA (PAGO) --- */
+.columna-pago {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #fceeb5;
+}
+
+/* Estado Vacío */
+.mensaje-centro {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    text-align: center; color: #d1d5db;
+}
+.mensaje-centro ion-icon { font-size: 5rem; margin-bottom: 10px; color: #e5e7eb; }
+
+/* Panel Activo */
+#panel-cobro { height: 100%; display: flex; flex-direction: column; }
+
+/* Header del Pedido */
+.info-pedido-header {
+    background: #fff8f1; /* Crema muy suave */
+    padding: 20px;
+    border-bottom: 2px dashed #ffbc0d; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info-pedido-header h2 { font-size: 1.2rem; color: #333; }
+.total-grande { text-align: right; color: #e00018; } 
+.total-grande small { color: #888; font-weight: 600; text-transform: uppercase; font-size: 0.7rem; }
+.total-grande div { font-size: 2rem; font-weight: 900; line-height: 1; }
+
+.grid-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 25px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+h3 { font-size: 0.8rem; text-transform: uppercase; color: #999; margin-bottom: 10px; letter-spacing: 1px; font-weight: 700; }
+
+/* Tabla */
+.tabla-detalle { width: 100%; border-collapse: collapse; margin-bottom: 20px; background: #fff; border: 1px solid #eee; border-radius: 8px; }
+.tabla-detalle td { padding: 12px; font-size: 0.95rem; border-bottom: 1px solid #eee; }
+
+/* Botones Toggle (Boleta/Factura) */
+.botones-toggle { display: flex; gap: 10px; }
+.btn-toggle { 
+    flex: 1; padding: 12px; border: 2px solid #eee; background: white; 
+    border-radius: 8px; cursor: pointer; font-weight: 600; color: #666; transition: 0.2s;
+}
+/* Activo: Borde Amarillo y Texto Oscuro */
+.btn-toggle.activo { 
+    background: #fffbeb; 
+    border-color: #ffbc0d; 
+    color: #b45309; 
+}
+
+/* Botones Método de Pago */
+.grid-metodos { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+.btn-metodo {
+    padding: 15px; border: 2px solid #eee; background: white; border-radius: 10px;
+    display: flex; flex-direction: column; align-items: center; gap: 5px; cursor: pointer; color: #888; font-weight: 600; transition: 0.2s;
+}
+.btn-metodo ion-icon { font-size: 1.8rem; margin-bottom: 5px; }
+
+/* Activo: Borde Rojo Fuerte */
+.btn-metodo.activo { 
+    background: #fef2f2; 
+    border-color: #e00018; 
+    color: #e00018; 
+    box-shadow: 0 4px 6px rgba(224, 0, 24, 0.1);
+}
+
+/* Caja de Monto (Estilo amarillo suave) */
+.box-monto { 
+    background: #fffbeb; 
+    border: 1px solid #fde68a; 
+    padding: 20px; 
+    border-radius: 12px; 
+    margin-bottom: 20px; 
+}
+.box-monto label { font-size: 0.85rem; font-weight: 700; color: #92400e; }
+
+.input-icon { position: relative; margin-top: 8px; }
+.input-icon span { position: absolute; left: 12px; top: 12px; color: #d97706; font-weight: bold; font-size: 1.1rem; }
+.input-icon input {
+    width: 100%; padding: 10px 10px 10px 40px; 
+    border: 2px solid #fcd34d; border-radius: 8px;
+    font-size: 1.4rem; font-weight: 800; outline: none; color: #333;
+    background: white;
+}
+.input-icon input:focus { border-color: #fbbf24; box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.3); }
+
+/* Vuelto en Verde */
+.fila-vuelto { display: flex; justify-content: space-between; margin-top: 15px; padding-top: 15px; border-top: 1px dashed #fcd34d; align-items: center; }
+.vuelto-valor { font-size: 1.3rem; font-weight: 900; color: #16a34a; }
+
+/* BOTÓN FINAL (ROJO - BRANDING) */
+.form-final { margin-top: auto; }
+#btn-cobrar {
+    width: 100%; 
+    background: #e00018; /* Rojo marca */
+    color: white; 
+    border: none; padding: 16px;
+    border-radius: 10px; 
+    font-size: 1.1rem; font-weight: 800; letter-spacing: 0.5px;
+    cursor: pointer; transition: transform 0.1s, background 0.2s;
+    box-shadow: 0 4px 6px rgba(224, 0, 24, 0.3);
+}
+#btn-cobrar:hover { background: #c50014; transform: translateY(-1px); }
+#btn-cobrar:active { transform: translateY(1px); }
+#btn-cobrar:disabled { background: #ccc; box-shadow: none; cursor: not-allowed; opacity: 0.7; }
+
+/* --- BOTÓN REGRESAR --- */
+.header-izq { display: flex; align-items: center; gap: 20px; }
+
+.btn-regresar {
+    display: inline-flex; align-items: center; gap: 8px;
+    background-color: #e00018; color: white;
+    text-decoration: none; padding: 10px 16px; border-radius: 8px;
+    font-weight: 700; font-size: 0.95rem;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 3px 5px rgba(224, 0, 24, 0.2);
+}
+.btn-regresar:hover { background-color: #c50014; transform: translateY(-1px); }
+.btn-regresar ion-icon { font-size: 1.2rem; }
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #fcd34d; border-radius: 3px; }
